@@ -3,22 +3,19 @@ import { films } from './films.js';
 // Función para renderizar películas en una tabla
 function renderFilmsTable(filmsData) {
   const container = document.getElementById("films");
-  container.innerHTML = ""; // limpiar antes de renderizar
-
+  container.innerHTML = "";
+  
   // Crear tabla
   const table = document.createElement("table");
-  table.border = "1";
-  table.style.width = "100%";
-  table.style.borderCollapse = "collapse";
-
+  
   // Crear encabezado
   const header = `
     <thead>
       <tr>
+        <th>Póster</th>
         <th>Título</th>
         <th>Año</th>
         <th>Descripción</th>
-        <th>URL</th>
         <th>Género</th>
         <th>Acciones</th>
       </tr>
@@ -107,6 +104,7 @@ form.addEventListener("submit", (event) => {
 });
 
 //Filtro por genero
+
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach(link => {
