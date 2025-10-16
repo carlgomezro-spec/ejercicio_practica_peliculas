@@ -35,8 +35,8 @@ function renderFilmsTable(filmsData) {
       <td>${film.description}</td>
       <td>${film.gender}</td>
       <td>
-        <button class="delete-button">🗑️</button>
         <button class="edit-button">✏️</button>
+         <button class="delete-button">🗑️</button>
       </td>
     `;
 
