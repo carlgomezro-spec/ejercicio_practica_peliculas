@@ -5,10 +5,10 @@ function renderFilmsTable(filmsData) {
   const container = document.getElementById("films");
   container.innerHTML = "";
   
-  // Crear tabla
+  // Creaamos la tabla
   const table = document.createElement("table");
-  
-  // Crear encabezado
+
+  // Creaamos el encabezado
   const header = `
     <thead>
       <tr>
@@ -23,13 +23,13 @@ function renderFilmsTable(filmsData) {
   `;
   table.innerHTML = header;
 
-  // Crear cuerpo de la tabla
+  // Creaamos el cuerpo de la tabla
   const tbody = document.createElement("tbody");
 
   filmsData.forEach((film, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td><img src="${film.url}"</img></td>
+      <td><img src="${film.url}" /></td>
       <td>${film.title}</td>
       <td>${film.year}</td>
       <td>${film.description}</td>
@@ -82,19 +82,28 @@ form.addEventListener("submit", (event) => {
   const url = document.getElementById("url").value.trim();
   const gender = document.getElementById("gender").value;
 
-  // Validaciones REGEX
+ // Validaciones REGEX
   const yearRegex = /^(18[0-9]{2}|19[0-9]{2}|20[0-1][0-9]|202[0-9])$/;
-  if (!yearRegex.test(year) || year > new Date().getFullYear()) {
-    Swal.fire("(Por favor, introduce un año válido (entre 1800 y el actual).");
+  const yearNumber = parseInt(year);
+
+  if (!yearRegex.test(year) || yearNumber > new Date().getFullYear()) {
+    Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Por favor, introduce un año válido (entre 1800 y el actual).",   
+    });
     return;
   }
 
   const descriptionRegex = /^[\wÀ-ÿ0-9\s.,!?:-]{1,200}$/;
   if (!descriptionRegex.test(description)) {
-    Swal.fire("Por favor, introduce una descripción válida (máx. 200 caracteres).");
+    Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Por favor, introduce una descripción válida (máx. 200 caracteres).",   
+    });
     return;
   }
-
   // Crear nueva película
   const newFilm = { title, year: parseInt(year), description, url, gender };
 
@@ -103,7 +112,7 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
-//Filtro por genero
+//Filtro por género
 
 const navLinks = document.querySelectorAll("nav a");
 
