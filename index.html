@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<body>
+    <header> 
+        <div class = "logo">
+             <img src ="assets/blockbuster-logo.svg" alt="logo">
+         </div>
+        <nav>
+            <a href = "#">Accion</a>
+            <a href = "#">Terror</a>
+            <a href = "#">Comedia</a>
+            <a href = "#">Romantica</a>
+        </nav>
+    </header>
+    <main>
+        <section class="masthead">
+            <img src="assets/2.jpg" alt="Blockbuster Shop">
+        </section>
+         <section class="film-list">
+            <h1>Listado de películas</h1>
+            <div id="search-container">
+            <input type="text" id="search" placeholder="Busca tu película">
+            </div>
+            <div id="films"></div>
+        </section>
+        <section>
+            <h1>Añadir nueva película</h1>
+            <form id="film-form">
+                <label for="name">Título:</label>
+                <input type="text" id="name" required>
+                <label for="year">Año:</label>
+                <input type="number" id="year" required>
+                <label for="description">Descripción:</label>
+                <input type="text" id="description" required>
+                <label for="text">URL Foto:</label>
+                <input type="url" id="url" required>
+                <label for="genero">Género:</label>
+                <select id="genero" required>
+                    <option value="accion">Acción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="terror">Terror</option>
+                    <option value="romantica">Romántica</option>
+                </select>
+                <button type="submit">Añadir</button>
+            </form>
+        </section>
+       
+    </main>
+
+    <script type="module" src="./js/films.js"></script>   
+    <script type="module" src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

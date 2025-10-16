@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+:root {
+    --background: #ffffff;
+    --primary: #ffffff;
+    --secondary: #020381;
+    --font-normal: 400;
+    --font-light: 300;
+    --font-bold: 900;
+}
+
+/* 🎨 MIS CSS*/
+
+body {
+    background-color: var(--background);
+    font-family: "Lato", sans-serif;
+    font-weight: var(--font-light);
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--secondary);
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+nav a {
+    display: flex;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: var(--font-bold);
+}
+
+nav a.activo {
+  color: #FFA903;
+  font-weight: bold;
+}
+
+#search-container{
+padding: 15px;
+display: flex;
+justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.masthead {
+  width: 100%;
+  height: 25vh;          /* Altura proporcional al viewport */
+    /* Para que no sobresalga */
+}
+
+.masthead img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Mantiene la proporción y recorta si hace falta */
+  display: block;
+}
+
+
+h1 {
+    padding: 15px;
+    color: #020381;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: #fcc139;
+    left: 12px;
+    bottom: 550px;
+    width: 5%
+}
+
+#film-form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+td img {
+    display: flex;
+    width: 25%;
+    
+}
+
+#films {
+    padding: 15px;
+}
+
+thead {
+    background-color: #020381;
+    color: #ffffff;
+}
+
+table {
+    border-right: none; /* Eliminamos las líneas verticales */
+    border-collapse: collapse; /* Necesario para que los bordes se gestionen bien */
+}
