@@ -53,24 +53,16 @@ Permite **ver, agregar, editar, eliminar, buscar y filtrar** películas por gén
 
 🧪 Validaciones
 
-Año: Solo entre 1800 y el año actual.
-
-Descripción: Hasta 200 caracteres, sin símbolos extraños.
-
-Si hay un error, se muestra un SweetAlert2 con el mensaje correspondiente.
+- Año: Solo entre 1800 y el año actual.
+- Descripción: Hasta 200 caracteres, sin símbolos extraños.
+- Si hay un error, se muestra un SweetAlert2 con el mensaje correspondiente.
 
 💬 Uso
 
-Clona o descarga el repositorio.
-
-Asegúrate de tener los archivos en la misma carpeta.
-
-Abre index.html en tu navegador.
-
-Interactúa con:
-
-El menú de géneros para filtrar películas.
-
-El campo de búsqueda para filtrar por título.
-
-El formulario para agregar nuevas películas.
+- Clona o descarga el repositorio.
+- Asegúrate de tener los archivos en la misma carpeta.
+- Abre index.html en tu navegador.
+- Interactúa con:
+- El menú de géneros para filtrar películas.
+- El campo de búsqueda para filtrar por título.
+- El formulario para agregar nuevas películas.
